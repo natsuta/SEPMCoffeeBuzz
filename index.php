@@ -1,6 +1,6 @@
 <?php include_once('header.php'); ?>
-<title></title>
+<title>CoffeeBuzz</title>
 <body>
-	<p>Test</p>
+	<p>This is the CoffeeBuzz system made specially for 4U at the University Campus.</p>
 </body>
 <?php include_once('footer.php'); ?>
