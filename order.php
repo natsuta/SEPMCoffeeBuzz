@@ -269,6 +269,13 @@
 				</th>
 				<th><p id="ST10"></p></th>
 			</tr>
+			<tr>
+				<th>Total</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th><p id="totalPrice"></p></th>
+			</tr>
 		</table>
 		<input type="submit" value="Submit" />
 	</form>

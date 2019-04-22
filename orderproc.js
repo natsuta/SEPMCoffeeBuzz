@@ -39,11 +39,9 @@ function calcResult(){
     document.getElementById("ST9").innerHTML = ST9;
     document.getElementById("ST10").innerHTML = ST10;
     
-    var totalQty = (+DWS10DVD) + (+DWS10Blu) + (+DWS11DVD) + (+DWS11Blu) + (+KSGKGDVD) + (+KSGKGBlu) + (+KRDCDDVD) + (+KRDCDBlu) + (+KSGTSCCD) + (+KRDTSCCD);
     var totalPrice = ST1 + ST2 + ST3 + ST4 + ST5 + ST6 + ST7 + ST8 + ST9 + ST10;
     totalPrice = totalPrice.toFixed(2)
 
-    document.getElementById("totalQty").innerHTML = totalQty;
     document.getElementById("totalPrice").innerHTML = totalPrice;
     document.getElementById("totalPriceForm").value = totalPrice;
 }
