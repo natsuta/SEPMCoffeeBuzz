@@ -277,6 +277,28 @@
 				<th><p id="totalPrice"></p></th>
 			</tr>
 		</table>
+
+		<?php
+			if (file_exists("foodstock.csv") == true){
+				echo "<table>";
+				$file = fopen("foodstock.csv", "r");
+				$count = 0;
+				while(($row = fgetcsv($file)) != false) {
+					echo "<th>$row[0]</th>";
+					echo "<th><select id='spitem". $count . "' 
+						name='spitem" . $count . "' onchange=''>";
+					echo "</select>";
+					echo "</th>";
+					echo "<th></th>";
+					echo "<th></th>";
+					echo "<th><p id='spitem" . $count . "Price'></p></th>";
+					$count++;
+				}
+				echo "</table>";
+			}
+		?>
+
+
 		<input type="submit" value="Submit" />
 	</form>
 </body>

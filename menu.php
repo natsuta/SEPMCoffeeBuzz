@@ -2,6 +2,7 @@
 <title>Menu</title>
 <body>
 	<h1>Menu</h1>
+	<h2>Drinks</h2>
 	<ul>
 		<li>Expresso
 			<ul>
@@ -41,6 +42,12 @@
 				<li>Large: $4.50</li>
 			</ul>
 		</li>
+	</ul>
+
+	<h2>Food</h2>
+	<ul>
+		<li>Caramel Slice: $4.50</li>
+		<li>Vanilla Slice: $4.50</li>
 	</ul>
 </body>
 <?php include_once('footer.php'); ?>
