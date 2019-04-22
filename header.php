@@ -1,11 +1,10 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
-<!-- Split components into PHP modules later -->
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" media="screen" href="main.css">
-	<script src="main.js"></script>
+	<link rel="stylesheet" type="text/css" href="wireframe.css">
+	<header><h1>4U CoffeeBuzz</h1></header>
 </head>
 <nav>
 	<a href="index.php">Home</a>

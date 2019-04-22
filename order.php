@@ -1,24 +1,23 @@
 <?php include_once('header.php'); ?>
 <title>Order Form</title>
 <body>
+	<script type="text/javascript" src="orderproc.js"></script>
+	<h1>Order Form</h1>
 	<p>Test</p>
 
 	<form action="cart.php" method="post">
 		<table>
 			<tr>
 				<th>Products</th>
-				<th>Price</th>
-				<th>Quantity</th>
-				<th></th>
-				<th></th>
+				<th>Small</th>
+				<th>Medium</th>
+				<th>Large</th>
 				<th>Subtotal</th>
 			</tr>
 
 			<tr>
 				<th>Expresso</th>
-				<th>$2.50</th>
-				<th>Small:
-					<select id="Cap" name="Cap" onchange="calcResult()">
+				<th><select id="Exp" name="Exp" onchange="calcResult()">
 						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -27,13 +26,11 @@
 						<option value="5">5</option>
 					</select>
 				</th>
-				<th>Medium:
-					<select disabled>
+				<th><select disabled>
 						<option value="0">0</option>
 					</select>
 				</th>
-				<th>Large:
-					<select disabled>
+				<th><select disabled>
 						<option value="0">0</option>
 					</select>
 				</th>
@@ -42,9 +39,7 @@
 
 			<tr>
 				<th>Double Expresso</th>
-				<th>$2.50</th>
-				<th>Small:
-					<select id="Cap" name="Cap" onchange="calcResult()">
+				<th><select id="DExp" name="DExp" onchange="calcResult()">
 						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -53,13 +48,11 @@
 						<option value="5">5</option>
 					</select>
 				</th>
-				<th>Medium:
-					<select disabled>
+				<th><select disabled>
 						<option value="0">0</option>
 					</select>
 				</th>
-				<th>Large:
-					<select disabled>
+				<th><select disabled>
 						<option value="0">0</option>
 					</select>
 				</th>
@@ -68,19 +61,15 @@
 		
 			<tr>
 				<th>Latte</th>
-				<th>$2.50</th>
-				<th>Small:
-					<select disabled>
+				<th><select disabled>
 						<option value="0">0</option>
 					</select>
 				</th>
-				<th>Medium:
-					<select disabled>
+				<th><select disabled>
 						<option value="0">0</option>
 					</select>
 				</th>
-				<th>Large:
-					<select id="Cap" name="Cap" onchange="calcResult()">
+				<th><select id="Lat" name="Lat" onchange="calcResult()">
 						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -94,14 +83,11 @@
 
 			<tr>
 				<th>Cappuccino</th>
-				<th>$2.50</th>
-				<th>Small:
-					<select disabled>
+				<th><select disabled>
 						<option value="0">0</option>
 					</select>
 				</th>
-				<th>Medium:
-					<select id="Cap" name="Cap" onchange="calcResult()">
+				<th><select id="MCap" name="MCap" onchange="calcResult()">
 						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -110,8 +96,7 @@
 						<option value="5">5</option>
 					</select>
 				</th>
-				<th>Large:
-					<select id="Cap" name="Cap" onchange="calcResult()">
+				<th><select id="LCap" name="LCap" onchange="calcResult()">
 						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -125,14 +110,11 @@
 
 			<tr>
 				<th>Long Black</th>
-				<th>$2.50</th>
-				<th>Small:
-					<select disabled>
+				<th><select disabled>
 						<option value="0">0</option>
 					</select>
 				</th>
-				<th>Medium:
-					<select id="Cap" name="Cap" onchange="calcResult()">
+				<th><select id="MLB" name="MLB" onchange="calcResult()">
 						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -141,8 +123,7 @@
 						<option value="5">5</option>
 					</select>
 				</th>
-				<th>Large:
-					<select id="Cap" name="Cap" onchange="calcResult()">
+				<th><select id="LLB" name="LLB" onchange="calcResult()">
 						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -156,14 +137,11 @@
 
 			<tr>
 				<th>Hot Chocolate</th>
-				<th>$2.50</th>
-				<th>Small:
-					<select disabled>
+				<th><select disabled>
 						<option value="0">0</option>
 					</select>
 				</th>
-				<th>Medium:
-					<select id="Cap" name="Cap" onchange="calcResult()">
+				<th><select id="MChoc" name="MChoc" onchange="calcResult()">
 						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -172,8 +150,7 @@
 						<option value="5">5</option>
 					</select>
 				</th>
-				<th>Large:
-					<select id="Cap" name="Cap" onchange="calcResult()">
+				<th><select id="LChoc" name="LChoc" onchange="calcResult()">
 						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -187,14 +164,11 @@
 
 			<tr>
 				<th>Earl Grey</th>
-				<th>$2.50</th>
-				<th>Small:
-					<select disabled>
+				<th><select disabled>
 						<option value="0">0</option>
 					</select>
 				</th>
-				<th>Medium:
-					<select id="Cap" name="Cap" onchange="calcResult()">
+				<th><select id="MEarl" name="MEarl" onchange="calcResult()">
 						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -203,8 +177,7 @@
 						<option value="5">5</option>
 					</select>
 				</th>
-				<th>Large:
-					<select id="Cap" name="Cap" onchange="calcResult()">
+				<th><select id="LEarl" name="LEarl" onchange="calcResult()">
 						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -218,14 +191,11 @@
 
 			<tr>
 				<th>Assam</th>
-				<th>$2.50</th>
-				<th>Small:
-					<select disabled>
+				<th><select disabled>
 						<option value="0">0</option>
 					</select>
 				</th>
-				<th>Medium:
-					<select id="Cap" name="Cap" onchange="calcResult()">
+				<th><select id="MAssam" name="MAssam" onchange="calcResult()">
 						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -234,8 +204,7 @@
 						<option value="5">5</option>
 					</select>
 				</th>
-				<th>Large:
-					<select id="Cap" name="Cap" onchange="calcResult()">
+				<th><select id="LAssam" name="LAssam" onchange="calcResult()">
 						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -249,14 +218,11 @@
 
 			<tr>
 				<th>Green Tea</th>
-				<th>$2.50</th>
-				<th>Small:
-					<select disabled>
+				<th><select disabled>
 						<option value="0">0</option>
 					</select>
 				</th>
-				<th>Medium:
-					<select id="Cap" name="Cap" onchange="calcResult()">
+				<th><select id="MGreen" name="MGreen" onchange="calcResult()">
 						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -265,8 +231,7 @@
 						<option value="5">5</option>
 					</select>
 				</th>
-				<th>Large:
-					<select id="Cap" name="Cap" onchange="calcResult()">
+				<th><select id="LGreen" name="LGreen" onchange="calcResult()">
 						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -280,14 +245,11 @@
 
 			<tr>
 				<th>Mint Tea</th>
-				<th>$2.50</th>
-				<th>Small:
-					<select disabled>
+				<th><select disabled>
 						<option value="0">0</option>
 					</select>
 				</th>
-				<th>Medium:
-					<select id="Cap" name="Cap" onchange="calcResult()">
+				<th><select id="MMint" name="MMint" onchange="calcResult()">
 						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -296,8 +258,7 @@
 						<option value="5">5</option>
 					</select>
 				</th>
-				<th>Large:
-					<select id="Cap" name="Cap" onchange="calcResult()">
+				<th><select id="LMint" name="LMint" onchange="calcResult()">
 						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -309,9 +270,7 @@
 				<th><p id="ST10"></p></th>
 			</tr>
 		</table>
-	
-		<input type="submit" value="submit">Submit</input>
+		<input type="submit" value="Submit" />
 	</form>
-
 </body>
 <?php include_once('footer.php'); ?>
