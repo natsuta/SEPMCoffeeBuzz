@@ -280,18 +280,30 @@
 
 		<?php
 			if (file_exists("foodstock.csv") == true){
+				echo "<script type='text/javascript' src='orderprocfood.js'></script>";
 				echo "<table>";
 				$file = fopen("foodstock.csv", "r");
 				$count = 0;
+				$row = fgetcsv($file);
 				while(($row = fgetcsv($file)) != false) {
-					echo "<th>$row[0]</th>";
-					echo "<th><select id='spitem". $count . "' 
-						name='spitem" . $count . "' onchange=''>";
+					echo "<tr>";
+					echo "<th>$row[0] $row[1]</th>";
+					echo "<th><select id='spitem$count'
+						name='spitem$count' onchange=''>";
+					if ($row[2] <= 5){
+						for($i=0; $i<$row[2]; $i++){
+							echo "<option value=$i.>$i</option>";
+						}
+					}
+					else {
+						for($i=0; $i<=5; $i++){
+							echo "<option value=$i.>$i</option>";
+						}
+					}
 					echo "</select>";
 					echo "</th>";
-					echo "<th></th>";
-					echo "<th></th>";
-					echo "<th><p id='spitem" . $count . "Price'></p></th>";
+
+					echo "</tr>";
 					$count++;
 				}
 				echo "</table>";

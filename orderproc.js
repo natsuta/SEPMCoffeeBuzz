@@ -28,16 +28,16 @@ function calcResult(){
     var ST9 = (3.40 * MGreen) + (4.50 * LGreen);
     var ST10 = (3.40 * MMint) + (4.50 * LMint);
     
-    document.getElementById("ST1").innerHTML = ST1;
-    document.getElementById("ST2").innerHTML = ST2;
-    document.getElementById("ST3").innerHTML = ST3;
-    document.getElementById("ST4").innerHTML = ST4;
-    document.getElementById("ST5").innerHTML = ST5;
-    document.getElementById("ST6").innerHTML = ST6;
-    document.getElementById("ST7").innerHTML = ST7;
-    document.getElementById("ST8").innerHTML = ST8;
-    document.getElementById("ST9").innerHTML = ST9;
-    document.getElementById("ST10").innerHTML = ST10;
+    document.getElementById("ST1").innerHTML = ST1.toFixed(2);
+    document.getElementById("ST2").innerHTML = ST2.toFixed(2);
+    document.getElementById("ST3").innerHTML = ST3.toFixed(2);
+    document.getElementById("ST4").innerHTML = ST4.toFixed(2);
+    document.getElementById("ST5").innerHTML = ST5.toFixed(2);
+    document.getElementById("ST6").innerHTML = ST6.toFixed(2);
+    document.getElementById("ST7").innerHTML = ST7.toFixed(2);
+    document.getElementById("ST8").innerHTML = ST8.toFixed(2);
+    document.getElementById("ST9").innerHTML = ST9.toFixed(2);
+    document.getElementById("ST10").innerHTML = ST10.toFixed(2);
     
     var totalPrice = ST1 + ST2 + ST3 + ST4 + ST5 + ST6 + ST7 + ST8 + ST9 + ST10;
     totalPrice = totalPrice.toFixed(2)
