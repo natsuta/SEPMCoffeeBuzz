@@ -292,12 +292,12 @@
 						name='spitem$count' onchange=''>";
 					if ($row[2] <= 5){
 						for($i=0; $i<$row[2]; $i++){
-							echo "<option value=$i.>$i</option>";
+							echo "<option value=$i>$i</option>";
 						}
 					}
 					else {
 						for($i=0; $i<=5; $i++){
-							echo "<option value=$i.>$i</option>";
+							echo "<option value=$i>$i</option>";
 						}
 					}
 					echo "</select>";

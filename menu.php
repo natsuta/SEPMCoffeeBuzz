@@ -45,9 +45,13 @@
 	</ul>
 
 	<h2>Food</h2>
+	<!-- Update this if updating food -->
 	<ul>
 		<li>Caramel Slice: $4.50</li>
 		<li>Vanilla Slice: $4.50</li>
+		<li>Chocolate Muffin: $4.00</li>
+		<li>Blueberry Muffin: $4.00</li>
+		<li>Macaron Set: $6.50</li>
 	</ul>
 </body>
 <?php include_once('footer.php'); ?>
