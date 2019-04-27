@@ -1,7 +1,6 @@
 <?php include_once('header.php'); ?>
-<title>Order Form</title>
+<title>Shopping Cart</title>
 <body>
-	<title>Shopping Cart</title>
 	<h1>Shopping Cart</h1>
 
 	<?php
@@ -183,8 +182,7 @@
 			
 				if($_SESSION['cart']['Lat'] > 0){
 					echo "<tr>";
-						echo "<th>Latte/th>";
-						echo "<th>$4.70</th>";
+						echo "<th>Latte</th>";
 						echo "<th>";
 						print_r($_SESSION['cart']['Lat']);
 						echo "</th>";
@@ -245,7 +243,6 @@
 				if($_SESSION['cart']['LLB'] > 0){
 					echo "<tr>";
 						echo "<th>Long Black (Large)</th>";
-						echo "<th>$89.99</th>";
 						echo "<th>";
 						print_r($_SESSION['cart']['LLB']);
 						echo "</th>";
@@ -265,7 +262,7 @@
 						print_r($_SESSION['cart']['MChoc']);
 						echo "</th>";
 						echo "<th>";
-						print_r($_SESSION['cart']['MChoc']*99.99);
+						print_r($_SESSION['cart']['MChoc']*4.20);
 						echo "</th>";
 						echo "<th>";
 						echo "<button type='submit' name='delete' value='MChoc'>Delete</button>";

@@ -10,6 +10,7 @@
 	<a href="index.php">Home</a>
 	<a href="menu.php">Menu</a>
 	<a href="order.php">Order Form</a>
+	<a href="cart.php">Cart</a>
 	<a href="queue.php">Queue Info</a>
 	<?php 
 	if(isset($_SESSION['user'])){
