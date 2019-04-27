@@ -283,7 +283,7 @@
 				echo "<script type='text/javascript' src='orderprocfood.js'></script>";
 				echo "<table>";
 				$file = fopen("foodstock.csv", "r");
-				$count = 0;
+				$count = 1;
 				$row = fgetcsv($file);
 				while(($row = fgetcsv($file)) != false) {
 					echo "<tr>";

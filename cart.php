@@ -75,6 +75,9 @@
 					$_SESSION['cart']['spitem5'] = 0;	
 					break;
 			}
+			if (empty($_SESSION['cart'])){
+				unset($_SESSION['cart']);
+			}
 		}
 		elseif(isset($_POST['clear'])) {
 			unset($_SESSION['cart']);
@@ -493,7 +496,7 @@
 			echo "</form>";
 		}
 		else {
-			echo "<p>You have cleared the cart or you have tried to access the cart without adding items to it. Please add items to the cart from the <a href='orderform.php'>order form</a>.</p>";
+			echo "<p>You have cleared the cart or you have tried to access the cart without adding items to it. Please add items to the cart from the <a href='order.php'>order form</a>.</p>";
 		}
 
 	?>
