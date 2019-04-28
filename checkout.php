@@ -10,6 +10,8 @@
 		fwrite($file, $counter.",".$order_str."\n");
 
 		$counter++;
+		if($counter > 100)
+			$counter = 1;
 		$recounter = fopen("queuecounter.txt", "w");
 		fwrite($recounter, $counter);
 		fclose($file);
