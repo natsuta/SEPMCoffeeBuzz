@@ -1,10 +1,10 @@
 <?php include_once('header.php'); ?>
 <title>CoffeeBuzz</title>
 <body>
-	<p class="center"><strong>This is the CoffeeBuzz system made specially for 4U at the University Campus.</strong></p>
-	<p class="center"><strong>Easy</strong></p>
-	<p class="center"><strong>Fast</strong></p>
-	<p class="center"><strong>Cheap</strong></p>
-	<div align="center"><img src="FairTradeCoffee.jpg" alt="Coffee"></div>
+	<p class="center">This is the CoffeeBuzz system made specially for 4U at the University Campus.</p>
+	<p class="center">Easy</p>
+	<p class="center">Fast</p>
+	<p class="center">Cheap</p>
+	<div align="center"><img src="FairTradeCoffee.jpg" alt="Coffee" width="50%"></div>
 </body>
 <?php include_once('footer.php'); ?>
