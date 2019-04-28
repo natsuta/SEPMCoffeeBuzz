@@ -30,7 +30,7 @@ nav a:hover, a:active {
 	background-color: rgb(0, 247, 255);
 }
 
-h2, p, table, form, li {
+h2, table, form {
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16px;
@@ -40,3 +40,27 @@ table {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.center {
+	text-align: center;
+	color: #f60;
+	font-size: 25px;
+}
+
+.title-menu {
+	list-style:none;
+	font-size: 16px;
+	color: black;
+	font-weight:bold;
+	text-align: center;
+
+}
+
+.size-menu{
+	line-height: 5px;
+	font-size: 12px;
+	color: black;
+	text-align: center;
+
+}
+

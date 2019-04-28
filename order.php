@@ -2,8 +2,7 @@
 <title>Order Form</title>
 <body>
 	<script type="text/javascript" src="orderproc.js"></script>
-	<h1>Order Form</h1>
-	<p>Test</p>
+	<h1>Order Form</h1>	
 
 	<form action="cart.php" method="post">
 		<table>
