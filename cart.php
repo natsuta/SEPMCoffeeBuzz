@@ -501,7 +501,7 @@
 		<button type='submit' name='clear'>Clear cart</button>
 	</form>
 
-	<form action="checkout.php" method='post'>
+	<form action="details.php" method='post'>
 		<input type='Submit' value='Submit'>
 	</form>
 
