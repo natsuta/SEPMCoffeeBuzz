@@ -5,9 +5,12 @@
 
 	<?php
 		$file = fopen("orders.csv", "a");
+		$details = fopen("details.csv", "a");
 		$counter = file_get_contents("queuecounter.txt");
 		$order_str = implode(",", $_SESSION['cart']);
+		$det_str = implode(",", $_POST);
 		fwrite($file, $counter.",".$order_str."\n");
+		fwrite($details, $counter.",".$det_str."\n");
 
 		$counter++;
 		if($counter > 100)
