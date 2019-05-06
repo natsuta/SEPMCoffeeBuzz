@@ -287,21 +287,25 @@
 				while(($row = fgetcsv($file)) != false) {
 					echo "<tr>";
 					echo "<th>$row[0] $row[1]</th>";
-					echo "<th><select id='spitem$count'
-						name='spitem$count' onchange=''>";
-					if ($row[2] <= 5){
-						for($i=0; $i<$row[2]; $i++){
-							echo "<option value=$i>$i</option>";
-						}
+					if($row[2] == 0){
+						echo "<th>Sold out</th>";
 					}
 					else {
-						for($i=0; $i<=5; $i++){
-							echo "<option value=$i>$i</option>";
+						echo "<th><select id='spitem$count'
+							name='spitem$count' onchange=''>";
+						if ($row[2] <= 5){
+							for($i=0; $i<$row[2]; $i++){
+								echo "<option value=$i>$i</option>";
+							}
 						}
+						else {
+							for($i=0; $i<=5; $i++){
+								echo "<option value=$i>$i</option>";
+							}
+						}
+						echo "</select>";
 					}
-					echo "</select>";
 					echo "</th>";
-
 					echo "</tr>";
 					$count++;
 				}
