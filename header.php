@@ -11,6 +11,9 @@ if ($conn->connect_error)
     die("Connection failed: " . $conn->connect_error);
 } 
 echo "Connected successfully";
+
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,6 +28,7 @@ echo "Connected successfully";
 	<a href="order.php">Order Form</a>
 	<a href="cart.php">Cart</a>
 	<a href="queue.php">Queue Info</a>
+	<a href="staff.php">Staff</a>
 	<?php 
 	if(isset($_SESSION['user'])){
 		echo "<a href='logout.php'>Logout</a>";
