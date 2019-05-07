@@ -279,7 +279,6 @@
 
 		<?php
 			if (file_exists("foodstock.csv") == true){
-				echo "<script type='text/javascript' src='orderprocfood.js'></script>";
 				echo "<table>";
 				$file = fopen("foodstock.csv", "r");
 				$count = 1;

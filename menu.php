@@ -44,12 +44,22 @@
 
 	<h1>Food</h1>
 	<!-- Update this if updating food -->
-	<div class="title-menu">
-		<p>Caramel Slice: $4.50</p>
-		<p>Vanilla Slice: $4.50</p>
-		<p>Chocolate Muffin: $4.00</p>
-		<p>Blueberry Muffin: $4.00</p>
-		<p>Macaron Set: $6.50</p>
-	</div>
+
+	<?php
+		if (file_exists("foodstock.csv") == true){
+			echo "<div class='title-menu'>";
+			$file = fopen("foodstock.csv", "r");
+			$row = fgetcsv($file);
+			while(($row = fgetcsv($file)) != false) {
+				echo "<p>$row[0]: $".trim($row[1])."</p>";
+				if($row[2] == 0){
+					echo "<p>Sold out</p>";
+				}
+			}
+			echo "</th>";
+			echo "</tr>";
+			echo "</div>";
+		}	
+	?>
 </body>
 <?php include_once('footer.php'); ?>
