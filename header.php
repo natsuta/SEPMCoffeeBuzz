@@ -12,7 +12,14 @@
    } else {
       echo "Opened database successfully\n";
    }
-?>
+  
+   $sql =<<<EOF
+      SELECT * from employee;
+EOF;
+
+   $ret = $db->query($sql);
+   
+?>   
 
 <!DOCTYPE html>
 <html>
