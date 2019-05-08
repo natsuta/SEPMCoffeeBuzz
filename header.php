@@ -1,20 +1,19 @@
 <?php 
-session_start(); 
-$servername = "localhost";
-$username = "root";
-$password = "haolei";
-$dbname = "coffeebuzz";
-$conn = new mysqli($servername, $username, $password);
-
-if ($conn->connect_error) 
-{
-    die("Connection failed: " . $conn->connect_error);
-} 
-echo "Connected successfully";
-
-
-
+	class MyDB extends SQLite3
+   {
+      function __construct()
+      {
+         $this->open('app.db');
+      }
+   }
+   $db = new MyDB();
+   if(!$db){
+      echo $db->lastErrorMsg();
+   } else {
+      echo "Opened database successfully\n";
+   }
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
