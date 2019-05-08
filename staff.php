@@ -3,9 +3,9 @@
 <body>
 	<div>
         <ul>
-        <?php foreach($datas as $key => $row):?>
+        
         <li>
-            <?php echo($key + 1); ?> Name:<?php echo $row['name']; ?>, Phone:<?php echo $row['phone']; ?>
+           
         </li>
         </ul>
     </div>
