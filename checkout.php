@@ -19,7 +19,7 @@
 		fwrite($recounter, $counter);
 		fclose($file);
 		fclose($recounter);
-
+		echo "<h2>Your order is being processed!</h2>"
 		?>
 
 </body>
