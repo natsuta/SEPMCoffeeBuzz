@@ -45,3 +45,4 @@ function calcResult(){
     document.getElementById("totalPrice").innerHTML = totalPrice;
     document.getElementById("totalPriceForm").value = totalPrice;
 }
+
