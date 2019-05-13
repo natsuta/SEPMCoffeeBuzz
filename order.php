@@ -293,7 +293,7 @@
 						echo "<th><select id='spitem$count'
 							name='spitem$count' onchange=''>";
 						if ($row[2] <= 5){
-							for($i=0; $i<$row[2]; $i++){
+							for($i=0; $i<=$row[2]; $i++){
 								echo "<option value=$i>$i</option>";
 							}
 						}
